@@ -1,9 +1,7 @@
-<div>
-  <div *ngFor="let producto of productos">
-    <img [src]="producto.image" alt="iamge";
-
-    <h2>
-
-    </h2>
+<div class="products--grid">
+  <div *ngFor="let product of products">
+    <img width="100" [src]="product.image" alt="image">
+    <p>{{ product.name}}</p>
+    <h2> {{product.price}}</h2>
   </div>
 </div>
