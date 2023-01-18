@@ -11,37 +11,37 @@ export class AppComponent {
     {
       name: 'angular',
       price: 565,
-      image: './assets/images/angular.png',
+      image: './assets/images/node.png',
     },
     {
       name: 'bootstrap',
       price: 356,
-      image: './assets/images/bootstrap.png'
+      image: './assets/images/node.png'
     },
     {
       name: 'css',
       price: 34,
-      image: './assets/images/css.png'
+      image: './assets/images/node.png'
     },
     {
       name: 'git',
       price: 23,
-      image: './assets/images/git.png'
+      image: './assets/images/node.png'
     },
     {
       name: 'html',
       price: 34,
-      image: './assets/images/html.png'
+      image: './assets/images/node.png'
     },
     {
       name: 'js',
       price: 3434,
-      image: './assets/images/js.png'
+      image: './assets/images/node.png'
     },
     {
     name: 'mysql',
     price: 34,
-    image: './assets/images/mysql.png'
+    image: './assets/images/node.png'
     },
     {
       name: 'node',
@@ -51,12 +51,12 @@ export class AppComponent {
     {
       name: 'shops',
       price: 34,
-      image: './assets/images/shops.jpg'
+      image: './assets/images/node.png'
     },
     {
       name: 'ts',
       price: 3434,
-      image: './assets/images/ts.png'
+      image: './assets/images/node.png'
     }
   ]
 }
