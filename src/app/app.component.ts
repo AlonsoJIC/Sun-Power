@@ -53,10 +53,5 @@ export class AppComponent {
       price: 34,
       image: './assets/images/node.png'
     },
-    {
-      name: 'ts',
-      price: 3434,
-      image: './assets/images/node.png'
-    }
   ]
 }

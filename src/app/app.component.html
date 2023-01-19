@@ -22,9 +22,9 @@
 </div>
 <!-- Productos -->
 <div class="container">
-  <div class="row" style="background-color: white;">
-    <div id="products-columns" class="col-sm-12 col-md-12 col-lg-12">
-      <div *ngFor="let product of products">
+  <div class="row">
+    <div id="products-columns" class="col-sm col-md col-lg-12">
+      <div class="productsdiv" *ngFor="let product of products">
         <img [src]="product.image" alt="image">
         <p>{{ product.name}}</p>
         <h2> {{product.price}}</h2>

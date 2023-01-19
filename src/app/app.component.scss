@@ -4,11 +4,16 @@
 
 #products-columns{
   text-align: center;
-  div{
-    display: inline-block;
-    border: solid 3px black;
-    border-radius: 25px;
-    margin: 10px;
+}
+.productsdiv{
+  display: inline-block;
+  border: solid 2px black;
+  border-radius: 15px;
+  margin: 10px;
+  width: 40vh;
+  img{
+    width: 35%;
   }
+
 }
 
