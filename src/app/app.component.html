@@ -20,6 +20,7 @@
     </nav>
   </div>
 </div>
+<!-- /HEADER -->
 <!-- Productos -->
 <div class="container">
   <div class="row">
@@ -32,3 +33,23 @@
     </div>
   </div>
 </div>
+<!-- /Productos -->
+<!-- FORMULARIO REGISTRO -->
+<form>
+  <div class="input.group">
+    <label for="name"></label>
+    <input type="text" required id="name" [(ngModel)]="registro.name">
+    <p>Mensaje</p>
+  </div>
+  <div class="input.group">
+    <label for="email"></label>
+    <input type="email" required id="email" [(ngModel)]="registro.email">
+    <p>Mensaje</p>
+  </div>
+  <div class="input.group">
+    <label for="password"></label>
+    <input type="password" required id="password" [(ngModel)]="registro.password">
+    <p>Mensaje</p>
+  </div>
+</form>
+<!-- /FORMULARIO REGISTRO -->
