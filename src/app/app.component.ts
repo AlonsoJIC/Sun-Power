@@ -9,7 +9,7 @@ import { FormBuilder } from '@angular/forms';
 export class AppComponent {
 
   title = 'proyectoAngular';
-  registro = {
+  register = {
     name: '',
     email: '',
     password:'',
@@ -61,4 +61,7 @@ export class AppComponent {
       image: './assets/images/node.png'
     },
   ]
+  onRegister() {
+    console.log(this.register)
+  }
 }

@@ -20,7 +20,31 @@
     </nav>
   </div>
 </div>
+<hr>
 <!-- /HEADER -->
+<!-- FORMULARIO REGISTRO -->
+<form (ngSubmit)="onRegister()" #registerForm="ngForm">
+  <div class="input.group">
+    <label for="name">Name</label>
+    <input type="text" name="name"required id="name" [(ngModel)]="register.name">
+    <p>Mensaje</p>
+  </div>
+  <div class="input.group">
+    <label for="email">Email</label>
+    <input type="email" name="email" required id="email" [(ngModel)]="register.email">
+    <p>Mensaje</p>
+  </div>
+  <div class="input.group">
+    <label for="password">Passowrd</label>
+    <input type="password" name="password" required id="password" [(ngModel)]="register.password">
+    <p>Mensaje</p>
+  </div>
+  <button [disabled]="registerForm.invalid" type="submit">Register</button>
+  <button type="button">Cancel</button>
+</form>
+<hr>
+<!-- /FORMULARIO REGISTRO -->
+
 <!-- Productos -->
 <div class="container">
   <div class="row">
@@ -34,22 +58,3 @@
   </div>
 </div>
 <!-- /Productos -->
-<!-- FORMULARIO REGISTRO -->
-<form>
-  <div class="input.group">
-    <label for="name"></label>
-    <input type="text" required id="name" [(ngModel)]="registro.name">
-    <p>Mensaje</p>
-  </div>
-  <div class="input.group">
-    <label for="email"></label>
-    <input type="email" required id="email" [(ngModel)]="registro.email">
-    <p>Mensaje</p>
-  </div>
-  <div class="input.group">
-    <label for="password"></label>
-    <input type="password" required id="password" [(ngModel)]="registro.password">
-    <p>Mensaje</p>
-  </div>
-</form>
-<!-- /FORMULARIO REGISTRO -->
