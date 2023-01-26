@@ -1,11 +1,49 @@
-* {
-  padding: 0;
+* { padding: 0;
+}
+
+body{
+  background-color: red;
+}
+
+.register-form-div{
+  box-sizing: border-box;
+  padding: 45px 45px;
+  display: grid;
+  place-content: center;
+  background-image: url("https://uploads-ssl.webflow.com/5a9ee6416e90d20001b20038/628a07b418a34731bac4518a_ocean-gradient.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 230vh;
+  border: solid 5px black;
+ /* width: 630px;*/
+
+  div{
+    border: solid 5px black;
+    background-color: white;
   }
+}
+
+.register-message-error{
+  color:rgb(102, 11, 11);
+  opacity: 0;
+  transition: all linear 0.25s;
+  &.invalid {
+    opacity: 1;
+  }
+}
 
 #products-columns{
   text-align: center;
+  background-image: url("https://uploads-ssl.webflow.com/5a9ee6416e90d20001b20038/628a07b418a34731bac4518a_ocean-gradient.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 230vh;
 }
+
 .productsdiv{
+  background-color: white;
   display: inline-block;
   border: solid 2px black;
   border-radius: 15px;

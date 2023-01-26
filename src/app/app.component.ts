@@ -16,47 +16,47 @@ export class AppComponent {
   };
   products = [
     {
-      name: 'angular',
+      name: 'producto1',
       price: 565,
       image: './assets/images/node.png',
     },
     {
-      name: 'bootstrap',
+      name: 'producto2',
       price: 356,
       image: './assets/images/node.png'
     },
     {
-      name: 'css',
+      name: 'producto3',
       price: 34,
       image: './assets/images/node.png'
     },
     {
-      name: 'git',
+      name: 'producto4',
       price: 23,
       image: './assets/images/node.png'
     },
     {
-      name: 'html',
+      name: 'producto5',
       price: 34,
       image: './assets/images/node.png'
     },
     {
-      name: 'js',
+      name: 'producto6',
       price: 3434,
       image: './assets/images/node.png'
     },
     {
-    name: 'mysql',
+    name: 'producto7',
     price: 34,
     image: './assets/images/node.png'
     },
     {
-      name: 'node',
+      name: 'producto8',
       price: 23,
       image: './assets/images/node.png'
     },
     {
-      name: 'shops',
+      name: 'producto9',
       price: 34,
       image: './assets/images/node.png'
     },
