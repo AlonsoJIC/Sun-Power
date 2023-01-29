@@ -6,22 +6,20 @@ body{
 }
 
 .register-form-div{
-  box-sizing: border-box;
-  padding: 45px 45px;
   display: grid;
   place-content: center;
-  background-image: url("https://uploads-ssl.webflow.com/5a9ee6416e90d20001b20038/628a07b418a34731bac4518a_ocean-gradient.png");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 230vh;
-  border: solid 5px black;
- /* width: 630px;*/
-
+  border-radius: 20px;
   div{
-    border: solid 5px black;
     background-color: white;
+    border-radius: 20px;
   }
+}
+
+.form-styles {
+  border: solid 2.5px black;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 10px -7px 25px;
 }
 
 .register-message-error{
@@ -35,11 +33,6 @@ body{
 
 #products-columns{
   text-align: center;
-  background-image: url("https://uploads-ssl.webflow.com/5a9ee6416e90d20001b20038/628a07b418a34731bac4518a_ocean-gradient.png");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 230vh;
 }
 
 .productsdiv{
