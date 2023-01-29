@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { Product } from "./#models/product.model";
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,8 @@ export class AppComponent {
     email: '',
     password:'',
   };
-  products = [
+
+  product: Product[] = [
     {
       name: 'producto1',
       price: 565,
@@ -61,6 +63,10 @@ export class AppComponent {
       image: './assets/images/node.png'
     },
   ]
+
+
+
+
   onRegister() {
     console.log(this.register)
   }
