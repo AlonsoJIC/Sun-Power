@@ -1,1 +1,31 @@
-<p>regist works!</p>
+<!-- FORMULARIO REGISTRO -->
+<div class="container mt-3">
+  <div class="row">
+    <div id="col-sm- col-md col-lg">
+      <form class="register-form-div" (ngSubmit)="onRegister()" #registerForm="ngForm">
+        <div class="form-styles">
+          <h1 style="text-align: center;">Sign Up!</h1>
+          <div class="input.group">
+            <a for="name">Name</a><br>
+            <input type="text" name="name" required #fieldRequired1="ngModel" id="name" [(ngModel)]="register.name">
+            <label class="register-message-error"[class.invalid]="fieldRequired1.invalid" >*Required field.</label><br><br>
+          </div>
+          <div class="input.group">
+            <a for="email">Email</a><br>
+            <input type="email" name="email" required #fieldRequired2="ngModel" id="email" [(ngModel)]="register.email">
+            <label class="register-message-error"[class.invalid]="fieldRequired2.invalid"> *Required field.</label><br><br>
+          </div>
+          <div class="input.group">
+            <a for="password">Password</a><br>
+            <input type="password" name="password" required #fieldRequired3="ngModel" id="password" [(ngModel)]="register.password">
+            <label class="register-message-error"[class.invalid]="fieldRequired3.invalid">*Required field.</label><br><br>
+          </div>
+        </div>
+        <button class="register-buttons" [disabled]="registerForm.invalid" type="submit" style="border-radius: 15px;">Register</button>
+        <button class="register-buttons" type="button" style="border-radius: 15px;">Cancel</button>
+      </form>
+    </div>
+  </div>
+</div>
+<br><br><br>
+<!-- /FORMULARIO REGISTRO -->
