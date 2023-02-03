@@ -21,8 +21,12 @@
             <label class="register-message-error"[class.invalid]="fieldRequired3.invalid">*Required field.</label><br><br>
           </div>
         </div>
-        <button class="register-buttons" [disabled]="registerForm.invalid" type="submit" style="border-radius: 15px;">Register</button>
-        <button class="register-buttons" type="button" style="border-radius: 15px;">Cancel</button>
+        <div class="btn-group-vertical btn-group-md bg-transparent mt-1" role="group" aria-label="Small button group">
+          <button type="button" class="btn btn-dark mb-1 bg-dark" [disabled]="registerForm.invalid" type="submit" style="border-radius: 45px;">Register</button>
+          <button type="button" class="btn btn-dark bg-dark" style="border-radius: 45px;">Cancel</button>
+        </div>
+
+
       </form>
     </div>
   </div>

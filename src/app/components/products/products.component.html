@@ -1,0 +1,11 @@
+<!-- Productos -->
+<p>Productos en tu carrito: {{ myShopCart.length }}</p>
+<p>Total: {{totalCart}}</p>
+<div class="container-fluid mb-5">
+  <div class="row">
+    <div id="products-columns" class="col-sm col-md col-lg">
+      <app-product [product]="product" *ngFor="let product of product" (addedToCart)="onAddToShopCart($event)"></app-product>
+    </div>
+  </div>
+</div>
+<!-- /Productos -->

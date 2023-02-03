@@ -1,23 +1,41 @@
 <!-- HEADER -->
-<div id="navbar1">
-  <div class="container-fluid">
-    <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top pt-4 pb-4">
-      <div id="divhead1" class="container pt-1 pb-1">
-        <div class="collapse navbar-collapse" id="navbarScroll">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="#1cont">Productos</a>
-            </li>
-              <li class="nav-item">
-              <a class="nav-link" href="#2cont">Promociones</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#carouselImg">Carrito</a>
-            </li>
-          </ul>
-        </div>
+<!--NAV-->
+
+  <nav class="navbar navbar-expand-lg p-3 sticky-top mb-5">
+    <div class="container-fluid">
+      <a class="navbar-brand text-light" href="#">Boutique</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" style="color: white;" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-primary" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Promotions</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Products
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">For men</a></li>
+              <li><a class="dropdown-item" href="#">For women</a></li>
+              <li><a class="dropdown-item" href="#">For kids</a></li>
+            </ul>
+          </li>
+          <li class="nav-item text-white">
+            <a class="nav-link disabled">Disable...</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-4 text-primary" type="search" placeholder="Search..." aria-label="Search">
+          <button class="btn btn-primary btn-sm" type="submit">Search</button>
+        </form>
       </div>
-    </nav>
-  </div>
-</div>
+    </div>
+  </nav>
+
+<!--/NAV-->
 <!-- /HEADER -->

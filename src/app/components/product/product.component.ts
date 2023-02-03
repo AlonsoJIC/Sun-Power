@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Product } from "../../#models/product.model";
 
 @Component({
@@ -6,53 +6,22 @@ import { Product } from "../../#models/product.model";
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss']
 })
-export class ProductComponent {
+export class ProductComponent implements OnInit {
 
-  product: Product[] = [
-    {
-      name: 'producto1',
-      price: 565,
-      image: './assets/images/node.png',
-    },
-    {
-      name: 'producto2',
-      price: 356,
-      image: './assets/images/node.png'
-    },
-    {
-      name: 'producto3',
-      price: 34,
-      image: './assets/images/node.png'
-    },
-    {
-      name: 'producto4',
-      price: 23,
-      image: './assets/images/node.png'
-    },
-    {
-      name: 'producto5',
-      price: 34,
-      image: './assets/images/node.png'
-    },
-    {
-      name: 'producto6',
-      price: 3434,
-      image: './assets/images/node.png'
-    },
-    {
-    name: 'producto7',
-    price: 34,
-    image: './assets/images/node.png'
-    },
-    {
-      name: 'producto8',
-      price: 23,
-      image: './assets/images/node.png'
-    },
-    {
-      name: 'producto9',
-      price: 34,
-      image: './assets/images/node.png'
-    },
-  ]
+  @Input() product: Product = {
+    price: 0,
+    image: '',
+    title: '',
+    id: '',
+    description: '',
+    category: '',
+  };
+  @Output() addedToCart = new EventEmitter<Product>();
+
+  ngOnInit(): void {
+  }
+
+  addToCart(){
+    this.addedToCart.emit(this.product)
+  }
 }
