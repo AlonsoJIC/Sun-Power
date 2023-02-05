@@ -1,11 +1,21 @@
 <!-- Productos -->
 <p>Productos en tu carrito: {{ myShopCart.length }}</p>
 <p>Total: {{totalCart}}</p>
+<button (click)="toggleProductDetail()">Click</button>
+
 <div class="container-fluid mb-5">
   <div class="row">
     <div id="products-columns" class="col-sm col-md col-lg">
-      <app-product [product]="product" *ngFor="let product of product" (addedToCart)="onAddToShopCart($event)"></app-product>
+      <app-product [product]="product" *ngFor="let product of product"
+        (addedToCart)="onAddToShopCart($event)"
+        (showProduct)="onShowDetail($event)">
+      </app-product>
     </div>
+  </div>
+</div>
+<div class="product-detail" [class.active]="showProductDetail">
+  <div>
+    <button (click)="toggleProductDetail()">Close</button>
   </div>
 </div>
 <!-- /Productos -->

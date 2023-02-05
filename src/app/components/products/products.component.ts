@@ -85,6 +85,7 @@ export class ProductsComponent {
       image: './assets/images/node.png'
     },
   */  ];
+  showProductDetail = false;
 
   constructor(
     private storeService: StoreService,
@@ -106,5 +107,16 @@ export class ProductsComponent {
   onAddToShopCart(product: Product){
     this.storeService.addProduct(product);
     this.totalCart = this.storeService.getTotal();
+  }
+
+  toggleProductDetail(){
+    this.showProductDetail = !this.showProductDetail
+  }
+
+  onShowDetail(id: string) {
+    this.productsService.getProduct(id)
+    .subscribe(data =>{
+      console.log('product', data);
+    })
   }
 }
