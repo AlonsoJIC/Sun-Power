@@ -2,10 +2,17 @@
 <app-header></app-header>
 <!-- /HEADER -->
 
+<router-outlet></router-outlet>
+
+<button (click)="createUser()">Create User</button>
+<button (click)="downloadPdf()">Download PDF</button>
+<p>
+  <input type="file" (change)="onUpload($event)">
+  <img *ngIf="imgRta" [src]="imgRta">
+</p>
+
+
 <!-- FORMULARIO REGISTRO -->
 <app-regist></app-regist>
 <!-- /FORMULARIO REGISTRO -->
 
-<!-- Productos -->
-<app-products></app-products>
-<!-- /Productos -->

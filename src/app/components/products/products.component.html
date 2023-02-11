@@ -1,7 +1,7 @@
 <!-- Productos -->
 <p>Productos en tu carrito: {{ myShopCart.length }}</p>
 <p>Total: {{totalCart}}</p>
-<button (click)="toggleProductDetail()">Click</button>
+<button (click)="createNewProduct()"> New Product</button>
 
 <div class="container-fluid mb-5">
   <div class="row">
@@ -14,8 +14,28 @@
   </div>
 </div>
 <div class="product-detail" [class.active]="showProductDetail">
-  <div>
+  <div *ngIf="productChosen">
+    <button (click)="deleteProduct()">Delete</button>
+    <button (click)="updateProduct()">Editar</button>
     <button (click)="toggleProductDetail()">Close</button>
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active" *ngFor="let img of productChosen.images"> <img [src]="img" class="img-fluid" [alt]="productChosen.title">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>{{productChosen.title}} ${{productChosen.price}}</h5>
+            <p>{{productChosen.description}}</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev carousel-control-color" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
   </div>
 </div>
 <!-- /Productos -->
