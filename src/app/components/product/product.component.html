@@ -1,5 +1,5 @@
 <div>
-  <img class="images" *ngIf="product.images.length > 0" [src]="product.images[0]" alt="image">
+  <app-img class="images" *ngIf="product.images.length > 0" [img]="product.images[0]"></app-img>
   <div class="texts">
     <h2>{{ product.price | currency }}</h2>
     <p>{{ product.title }}</p>

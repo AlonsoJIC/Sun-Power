@@ -4,11 +4,6 @@ div{
   margin-bottom: 7px;
   width: 40vh;
 }
-.images{
-  width: 38vh;
-  border-radius: 15px 15px 0 0;
-  box-shadow: 10px -3px 7px;
-}
 
 .texts{
   border: solid 1px rgb(0, 0, 0);
@@ -18,3 +13,8 @@ div{
   box-shadow: 10px -6px 7px;
 }
 
+/* ESTO VA DENTRO DE IMG.COMPONENT.SCSS.images{
+  width: 38vh;
+  border-radius: 15px 15px 0 0;
+  box-shadow: 10px -3px 7px;
+} */
