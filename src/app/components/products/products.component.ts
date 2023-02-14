@@ -11,10 +11,12 @@ import { ProductsService } from '../../services/products.service';
 })
 export class ProductsComponent {
 
+
   myShopCart: Product[] = []
   totalCart = 0;
   @Input() product: Product[] = [];
   showProductDetail = false;
+  statusDetail: 'loading' | 'success' | 'error' | 'init' = 'init';
   productChosen: Product = {
     price: 0,
     images: [],
@@ -43,18 +45,39 @@ export class ProductsComponent {
   }
 
 //Boton de ver detalles para abrir y cerrar ventana
-  toggleProductDetail(){
-    this.showProductDetail = !this.showProductDetail
+  toggleProductDetail() {
+    this.showProductDetail = !this.showProductDetail;
   }
 
 //Ver detalle del producto
   onShowDetail(id: string) {
-    this.productsService.getProduct(id)
-    .subscribe(data =>{
-      this.toggleProductDetail();
-      this.productChosen = data;
-    })
+    this.statusDetail = 'loading';
+    this.toggleProductDetail();
+    this.productsService.getOne(id).subscribe(
+      (data) => {
+        this.productChosen = data;
+        this.statusDetail = 'success';
+      },
+      (errorMsg) => {
+        window.alert(errorMsg);
+        this.statusDetail = 'error';
+      }
+    );
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //Crear producto
   createNewProduct(){

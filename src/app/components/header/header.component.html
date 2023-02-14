@@ -3,30 +3,32 @@
 
   <nav class="navbar navbar-expand-lg p-3 sticky-top mb-5">
     <div class="container-fluid">
-      <a class="navbar-brand text-light" href="#">Boutique</a>
+      <a class="navbar-brand" href="#">Boutique</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" style="color: white;" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse" style="color: rgb(54, 220, 241);" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active text-primary" aria-current="page" href="#">Home</a>
+            <a routerLinkActive="active" class="nav-link active" aria-current="page" routerLink="home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#">Promotions</a>
+            <a class="nav-link" routerLink="home">All products.</a>
           </li>
+
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Products
+            <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categories.
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">For men</a></li>
-              <li><a class="dropdown-item" href="#">For women</a></li>
-              <li><a class="dropdown-item" href="#">For kids</a></li>
+              <li *ngFor="let item of categories">
+                <a routerLinkActive="active" [routerLink]="['/category', item.id]" class="dropdown-item">{{item.name}}</a>
+              </li>
             </ul>
           </li>
-          <li class="nav-item text-white">
-            <a class="nav-link disabled">Disable...</a>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact us.</a>
           </li>
         </ul>
         <div class="info">
@@ -35,9 +37,9 @@
             <ng-template #elseBlock>{{ profile?.email }}</ng-template>
           </div>
           <div class="cart">
-            <a href="">
+            <p href="">
               <img src="./assets/images/carrito.jpg" alt="logo">
-            </a>
+            </p>
             <span class="counter">{{ counter }}</span>
           </div>
         </div>

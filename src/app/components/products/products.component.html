@@ -14,6 +14,7 @@
   </div>
 </div>
 <div class="product-detail" [class.active]="showProductDetail">
+  {{ statusDetail }}
   <div *ngIf="productChosen">
     <button (click)="deleteProduct()">Delete</button>
     <button (click)="updateProduct()">Editar</button>

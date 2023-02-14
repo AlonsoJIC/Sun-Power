@@ -1,0 +1,25 @@
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+
+  h2,
+  h1 {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+}
+
+
+.carousel-control-next {
+  background-color: rgba(255, 255, 255, 0.024);
+  width: 9%;
+}
+.carousel-control-prev {
+  background-color: rgba(255, 255, 255, 0.024);
+  width: 9%;
+}

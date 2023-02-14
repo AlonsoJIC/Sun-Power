@@ -19,6 +19,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { RecoveryComponent } from './pages/recovery/recovery.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ImgComponent } from './components/img/img.component';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { ImgComponent } from './components/img/img.component';
     RegisterComponent,
     RecoveryComponent,
     ProfileComponent,
-    ImgComponent
+    ImgComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,

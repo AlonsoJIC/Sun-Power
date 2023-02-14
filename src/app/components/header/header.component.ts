@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { StoreService } from '../../services/store.service';
 import { AuthService } from '../../services/auth.service';
+import { CategoriesService } from '../../services/categories.service';
 import { User } from '../../#models/user.model';
 import { switchMap } from 'rxjs';
+import { Category } from '../../#models/product.model';
+
 
 
 @Component({
@@ -15,10 +18,12 @@ export class HeaderComponent implements OnInit {
   activeMenu = false;
   counter = 0;
   profile: User | null = null;
+  categories: Category[] = []
 
   constructor(
     private storeService: StoreService,
     private authService: AuthService,
+    private categoriesService: CategoriesService,
   ) {}
 
   ngOnInit(): void {
@@ -26,6 +31,8 @@ export class HeaderComponent implements OnInit {
     this.storeService.myCart$.subscribe(products => {
       this.counter = products.length;
     });
+    //DE LA MANO CON funcion de aqui mismogetAllCategories para llamar a todas las categorias
+    this.getAllCategoies();
   }
 
   toggleMenu() {
@@ -40,5 +47,12 @@ export class HeaderComponent implements OnInit {
     });
   }
 
+  //PARA OBTENER LAS CATEGORIAS DEL API Y PODER HACER EL RENDER DE LAS MISMAS YA SEA EN NAV O DONDE QUERAMOS
+  getAllCategoies(){
+    this.categoriesService.getAll()
+    .subscribe(data => {
+      this.categories = data;
+    });
+  }
 }
 
