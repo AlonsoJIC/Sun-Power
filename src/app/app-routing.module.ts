@@ -10,6 +10,9 @@ import { RegisterComponent } from './pages/register/register.component';
 import { RecoveryComponent } from './pages/recovery/recovery.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { AllProductsComponent } from './pages/all-products/all-products.component';
+import { ContactUsComponent } from './pages/contact-us/contact-us.component';
+
 
 const routes: Routes = [
   {
@@ -20,6 +23,10 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent
+  },
+  {
+    path: 'products',
+    component: AllProductsComponent
   },
   {
     path: 'category/:id',
@@ -44,6 +51,10 @@ const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent
+  },
+  {
+    path: 'contactUs',
+    component: ContactUsComponent
   },
   {
     path: 'recovery',

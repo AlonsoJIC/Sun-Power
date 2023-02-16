@@ -1,5 +1,6 @@
+<div class="container" ><button (click)="goToBack()">Back</button></div>
+
 <div class="container">
-  <button (click)="goToBack()">Back</button>
   <div class="row" *ngIf="product">
 
     <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="false">
@@ -16,10 +17,17 @@
       </button>
     </div>
 
-    <div>
-      <h1>{{ product.title }}</h1>
-      <h2>{{ product.price | currency }}</h2>
-      <p>{{ product.description }}</p>
+    <div class="product-details">
+      <h1 class="product-title">{{ product.title }}</h1>
+      <h2 class="product-price">{{ product.price | currency }}</h2>
+      <p class="product-description">{{ product.description }}</p>
+      <button class="product-button"> <span> BUY! </span></button>
     </div>
+
   </div>
 </div>
+
+<!-- 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-->
+
+<br><hr>
+

@@ -20,6 +20,8 @@ import { RecoveryComponent } from './pages/recovery/recovery.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ImgComponent } from './components/img/img.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { AllProductsComponent } from './pages/all-products/all-products.component';
+import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 
 
 @NgModule({
@@ -38,7 +40,9 @@ import { ProductDetailComponent } from './pages/product-detail/product-detail.co
     RecoveryComponent,
     ProfileComponent,
     ImgComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    AllProductsComponent,
+    ContactUsComponent,
   ],
   imports: [
     BrowserModule,

@@ -2,24 +2,93 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
+}
 
-  h2,
-  h1 {
-    margin-bottom: 5px;
-    font-weight: bold;
-    font-size: 2em;
-  }
-  h2 {
-    font-size: 1.5em;
-  }
+img{
+  border-radius: 25px;
 }
 
 
-.carousel-control-next {
-  background-color: rgba(255, 255, 255, 0.024);
-  width: 9%;
+.product-details {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #ffffffc9;
+  border: 1px solid #000000;
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.carousel-control-prev {
-  background-color: rgba(255, 255, 255, 0.024);
-  width: 9%;
+
+.product-title {
+  text-align: center;
+  color: rgb(230, 82, 173);
+  margin: 0 0 10px 0;
+  font-size: 32px;
+  font-weight: 600;
 }
+
+.product-price {
+  text-align: center;
+  color: rgb(218, 109, 233);
+  margin: 0 0 20px 0;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.product-description {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+
+.add-to-cart-button {
+  display: block;
+  margin: 0 auto;
+  padding: 15px 40px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-to-cart-button:hover {
+  background-color: #0062cc;
+}
+
+
+
+
+
+
+.product-button {
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(32deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+  transition: all 1.5s ease;
+  font-family: 'Ropa Sans', sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.05rem;
+  padding: 0;
+ }
+
+ .product-button span {
+  display: inline-block;
+  padding: 15px 35px;
+  font-size: 17px;
+  border-radius: 20px;
+  background: #ffffff00;
+  backdrop-filter: blur(20px);
+  transition: 0.4s ease-in-out;
+  transition-property: color;
+  height: 100%;
+  width: 100%;
+ }
+
+ .product-button span:hover {
+  backdrop-filter: blur(0px);
+  color: #ffffff;
+ }

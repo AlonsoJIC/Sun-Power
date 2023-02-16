@@ -1,3 +1,11 @@
-<!-- Productos -->
-<app-products [product]="product"></app-products>
-<!-- /Productos -->
+<button class="register-button" (click)="createUser()">Create User</button>
+<button class="buttonDownload" (click)="downloadPdf()">Download PDF</button>
+<p>
+  <input class="buttonDownload" type="file" (change)="onUpload($event)">
+  <img *ngIf="imgRta" [src]="imgRta">
+</p>
+
+
+<!-- FORMULARIO REGISTRO -->
+<app-regist></app-regist>
+<!-- /FORMULARIO REGISTRO -->

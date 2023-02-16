@@ -1,0 +1,134 @@
+//BOTON UPLOAD/DOWNLOAD
+.buttonDownload {
+  display: inline-block;
+  position: relative;
+  padding: 10px 25px;
+  background-color: #4CC713;
+  color: white;
+  font-family: sans-serif;
+  text-decoration: none;
+  font-size: 0.9em;
+  text-align: center;
+  text-indent: 15px;
+  border: none;
+  border-radius: 2em;
+  font-weight: bold;
+}
+
+.buttonDownload:hover {
+  background-color: #1a60a2;
+  color: white;
+}
+
+.buttonDownload:before, .buttonDownload:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 15px;
+  top: 52%;
+}
+
+.buttonDownload:before {
+  width: 10px;
+  height: 2px;
+  border-style: solid;
+  border-width: 0 2px 2px;
+}
+
+.buttonDownload:after {
+  width: 0;
+  height: 0;
+  margin-left: 3px;
+  margin-top: -7px;
+  border-style: solid;
+  border-width: 4px 4px 0 4px;
+  border-color: transparent;
+  border-top-color: inherit;
+  animation: downloadArrow 1s linear infinite;
+  animation-play-state: paused;
+}
+
+.buttonDownload:hover:before {
+  border-color: #bdd3ef;
+}
+
+.buttonDownload:hover:after {
+  border-top-color: #eff1f7;
+  animation-play-state: running;
+}
+
+@keyframes downloadArrow {
+  0% {
+    margin-top: -7px;
+    opacity: 1;
+  }
+
+  0.001% {
+    margin-top: -15px;
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    margin-top: 0;
+    opacity: 0.4;
+  }
+}
+
+// BOTON REGISTRARSE
+.register-button {
+  --color: #be48c9;
+  padding: 0.8em 1.7em;
+  background-color: white;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+ }
+
+ .register-button::before, .register-button::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+ }
+
+ .register-button::before {
+  top: -1em;
+  left: -1em;
+ }
+
+ .register-button::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+ }
+
+ .register-button:hover::before, .register-button:hover::after {
+  height: 410px;
+  width: 410px;
+ }
+
+ .register-button:hover {
+  color: rgb(255, 255, 255);
+ }
+
+ .register-button:active {
+  filter: brightness(.8);
+ }
