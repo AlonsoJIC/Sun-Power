@@ -72,6 +72,14 @@ const routes: Routes = [
       },
     ]
   },
+
+  //RENDERIZA LA PAGE DE ADMIN
+  {
+    path: 'admin',
+    loadChildren: () => import('./cms/cms.module').then(m => m.CmsModule)
+  },
+
+  //RENDERIZA LA PAGE NOTFOUND.... SIEMPRE VA DE ULTIMO PORQUE INTERFIERE!....
   {
     path: '**',
     component: NotFoundComponent
