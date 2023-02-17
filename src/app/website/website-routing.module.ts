@@ -10,52 +10,62 @@ import { RegisterComponent } from './pages/register/register.component';
 import { RecoveryComponent } from './pages/recovery/recovery.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { AllProductsComponent } from './pages/all-products/all-products.component';
+import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 
 
-const routes: Routes = [
-  {
-    path: '',
-    component: LayoutComponent,
-    children: [
-      {
-        path: '',
-        redirectTo: '/home',
-        pathMatch: 'full'
-      },
-      {
-        path: 'home',
-        component: HomeComponent
-      },
-      {
-        path: 'category/:id',
-        component: CategoryComponent
-      },
-      {
-        path: 'product/:id',
-        component: ProductDetailComponent
-      },
-      {
-        path: 'my-cart',
-        component: MyCartComponent,
-      },
-      {
-        path: 'login',
-        component: LoginComponent,
-      },
-      {
-        path: 'register',
-        component: RegisterComponent,
-      },
-      {
-        path: 'recovery',
-        component: RecoveryComponent,
-      },
-      {
-        path: 'profile',
-        component: ProfileComponent,
-      },
-    ]
-  },
+
+const routes: Routes = [  {
+  path: '',
+  component: LayoutComponent,
+  children: [
+    {
+      path: '',
+      redirectTo: 'home',
+      pathMatch: 'full'
+    },
+    {
+      path: 'home',
+      component: HomeComponent
+    },
+    {
+      path: 'products',
+      component: AllProductsComponent
+    },
+    {
+      path: 'category/:id',
+      component: CategoryComponent
+    },
+    {
+      path: 'product/:id',
+      component: ProductDetailComponent
+    },
+    {
+      path: 'my-cart',
+      component: MyCartComponent
+    },
+    {
+      path: 'login',
+      component: LoginComponent
+    },
+    {
+      path: 'register',
+      component: RegisterComponent
+    },
+    {
+      path: 'contactUs',
+      component: ContactUsComponent
+    },
+    {
+      path: 'recovery',
+      component: RecoveryComponent
+    },
+    {
+      path: 'profile',
+      component: ProfileComponent
+    },
+  ]
+},
 ];
 
 @NgModule({
