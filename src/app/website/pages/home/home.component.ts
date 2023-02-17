@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Product } from '../../#models/product.model';
-import { ProductsService } from '../../services/products.service';
-import { UsersService } from '../../services/users.service';
-import { FilesService } from '../../services/files.service';
+import { Product } from '../../../#models/product.model';
+import { ProductsService } from '../../../services/products.service';
+import { UsersService } from '../../../services/users.service';
+import { FilesService } from '../../../services/files.service';
 
 
 

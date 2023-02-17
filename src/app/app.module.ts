@@ -5,23 +5,24 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductComponent } from './components/product/product.component';
-import { RegistComponent } from './components/regist/regist.component';
-import { HeaderComponent } from './components/header/header.component';
-import { ProductsComponent } from './components/products/products.component';
+import { ProductComponent } from './website/components/product/product.component';
+import { RegistComponent } from './website/components/regist/regist.component';
+import { HeaderComponent } from './website/components/header/header.component';
+import { ProductsComponent } from './website/components/products/products.component';
 import { TokenInterceptor } from './interceptors/token.interceptor';
-import { HomeComponent } from './pages/home/home.component';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { CategoryComponent } from './pages/category/category.component';
-import { MyCartComponent } from './pages/my-cart/my-cart.component';
-import { LoginComponent } from './pages/login/login.component';
-import { RegisterComponent } from './pages/register/register.component';
-import { RecoveryComponent } from './pages/recovery/recovery.component';
-import { ProfileComponent } from './pages/profile/profile.component';
-import { ImgComponent } from './components/img/img.component';
-import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
-import { AllProductsComponent } from './pages/all-products/all-products.component';
-import { ContactUsComponent } from './pages/contact-us/contact-us.component';
+import { HomeComponent } from './website/pages/home/home.component';
+import { NotFoundComponent } from './website/pages/not-found/not-found.component';
+import { CategoryComponent } from './website/pages/category/category.component';
+import { MyCartComponent } from './website/pages/my-cart/my-cart.component';
+import { LoginComponent } from './website/pages/login/login.component';
+import { RegisterComponent } from './website/pages/register/register.component';
+import { RecoveryComponent } from './website/pages/recovery/recovery.component';
+import { ProfileComponent } from './website/pages/profile/profile.component';
+import { ImgComponent } from './website/components/img/img.component';
+import { ProductDetailComponent } from './website/pages/product-detail/product-detail.component';
+import { AllProductsComponent } from './website/pages/all-products/all-products.component';
+import { ContactUsComponent } from './website/pages/contact-us/contact-us.component';
+import { LayoutComponent } from './website/components/layout/layout.component';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { ContactUsComponent } from './pages/contact-us/contact-us.component';
     ProductDetailComponent,
     AllProductsComponent,
     ContactUsComponent,
+    LayoutComponent,
   ],
   imports: [
     BrowserModule,
