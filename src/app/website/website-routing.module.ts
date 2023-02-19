@@ -15,6 +15,7 @@ import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 
 //GUARDS
 import { AuthGuard } from './../guards/auth.guard';
+import { ExitGuard } from './../guards/exit.guard';
 
 
 
@@ -53,6 +54,7 @@ const routes: Routes = [  {
     },
     {
       path: 'register',
+      canDeactivate: [ExitGuard],
       component: RegisterComponent
     },
     {

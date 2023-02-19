@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit {
       name: 'alonso',
       email: 'alonso@gmail.com',
       password: '12345',
-      role: 'Admin', //CAMBIAR ESTO SI DA ERROR EN ALGUN MOMENTO POR CULPA DEL API DEL CURSO
+      //role: 'Admin', //CAMBIAR ESTO SI DA ERROR EN ALGUN MOMENTO POR CULPA DEL API DEL CURSO
     })
     .subscribe(rta =>{
       console.log(rta);
