@@ -13,6 +13,9 @@ import { ProductDetailComponent } from './pages/product-detail/product-detail.co
 import { AllProductsComponent } from './pages/all-products/all-products.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 
+//GUARDS
+import { AuthGuard } from './../guards/auth.guard';
+
 
 
 const routes: Routes = [  {
@@ -62,6 +65,7 @@ const routes: Routes = [  {
     },
     {
       path: 'profile',
+      canActivate: [AuthGuard],
       component: ProfileComponent
     },
   ]

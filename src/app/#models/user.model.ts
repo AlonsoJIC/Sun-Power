@@ -4,6 +4,7 @@ export interface User {
   email: string;
   password: string;
   name: string;
+  role: 'User' | 'Admin';  //CAMBIAR ESTO SI DA ERROR EN ALGUN MOMENTO POR CULPA DEL API DEL CURSO
 }
 
 export interface CreateUserDTO extends Omit<User, 'id'> { }

@@ -32,7 +32,8 @@ export class HomeComponent implements OnInit {
     this.usersService.create({
       name: 'alonso',
       email: 'alonso@gmail.com',
-      password: '12345'
+      password: '12345',
+      role: 'Admin', //CAMBIAR ESTO SI DA ERROR EN ALGUN MOMENTO POR CULPA DEL API DEL CURSO
     })
     .subscribe(rta =>{
       console.log(rta);

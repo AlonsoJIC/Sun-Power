@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { StoreService } from '../../../services/store.service';
 import { AuthService } from '../../../services/auth.service';
 import { CategoriesService } from '../../../services/categories.service';
 import { User } from '../../../#models/user.model';
-import { switchMap } from 'rxjs';
+
 import { Category } from '../../../#models/product.model';
 
 
@@ -24,6 +25,7 @@ export class HeaderComponent implements OnInit {
     private storeService: StoreService,
     private authService: AuthService,
     private categoriesService: CategoriesService,
+    private router: Router,
   ) {}
 
   ngOnInit(): void {
@@ -33,6 +35,11 @@ export class HeaderComponent implements OnInit {
     });
     //DE LA MANO CON funcion de aqui mismogetAllCategories para llamar a todas las categorias
     this.getAllCategoies();
+    //PARA LA REACTIVIDAD DE "user$"
+    this.authService.user$
+    .subscribe(data => {
+      this.profile = data;
+    })
   }
 
   toggleMenu() {
@@ -42,8 +49,8 @@ export class HeaderComponent implements OnInit {
   //AUTH LOGIN DE USER CREADO Y TOKEN
   login() {
     this.authService.loginAndGet('alonso@gmail.com', '12345')
-    .subscribe(user => {
-      this.profile = user;
+    .subscribe(() => {
+      this.router.navigate(['/profile']);
     });
   }
 
@@ -54,5 +61,13 @@ export class HeaderComponent implements OnInit {
       this.categories = data;
     });
   }
+
+  //LOGOUT , REMOVER EL TOKEN Y REDIRECCIONAR TODO EN ESTA FUNCION DE BOTON
+  logout(){
+    this.authService.logout();
+    this.profile = null;
+    this.router.navigate(['/home']);
+  }
+
 }
 
