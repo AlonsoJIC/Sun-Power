@@ -19,6 +19,10 @@ import { ProductDetailComponent } from './pages/product-detail/product-detail.co
 import { AllProductsComponent } from './pages/all-products/all-products.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { LayoutComponent } from './components/layout/layout.component';
+import { FooterComponent } from './components/footer/footer.component';
+
+import { MaterialModule } from '../#models/material.module';
+
 
 @NgModule({
   declarations: [
@@ -35,13 +39,15 @@ import { LayoutComponent } from './components/layout/layout.component';
     AllProductsComponent,
     ContactUsComponent,
     LayoutComponent,
+    FooterComponent,
 
   ],
   imports: [
     CommonModule,
     WebsiteRoutingModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    MaterialModule
   ]
 })
 export class WebsiteModule { }

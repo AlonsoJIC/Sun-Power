@@ -3,11 +3,13 @@ import { Router } from '@angular/router';
 import { StoreService } from '../../../services/store.service';
 import { AuthService } from '../../../services/auth.service';
 import { CategoriesService } from '../../../services/categories.service';
-import { User } from '../../../#models/user.model';
+import { CartService } from '../../../services/cart.service';
+import { map } from 'rxjs/operators';
 
+import { User } from '../../../#models/user.model';
 import { Category } from '../../../#models/product.model';
 
-
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -20,13 +22,20 @@ export class HeaderComponent implements OnInit {
   counter = 0;
   profile: User | null = null;
   categories: Category[] = []
+/*   total$: Observable<number>; */
 
   constructor(
     private storeService: StoreService,
     private authService: AuthService,
     private categoriesService: CategoriesService,
     private router: Router,
-  ) {}
+    private cartService: CartService
+  ) {
+/*  "FUNCION CON MATBADGE QUE NO ME SIRVE"   this.total$ = this.cartService.cart$
+    .pipe(
+      map(products => products.length)
+    ); */
+  }
 
   ngOnInit(): void {
     //OBSERVABLE DEL CARRITO

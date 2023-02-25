@@ -1,0 +1,26 @@
+//@import '~@angular/material/theming';
+
+/* $primary: mat-palette($mat-indigo); */
+
+footer {
+  position:relative;
+  width:100%;
+  background-color: rgb(44, 173, 206);
+  .box {
+    h3 {
+      color: rgb(65, 35, 240);
+    }
+    ul {
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+      li {
+        margin: 10px 0px;
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+  }
+}

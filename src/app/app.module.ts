@@ -7,6 +7,7 @@ import { TokenInterceptor } from './interceptors/token.interceptor';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    BrowserAnimationsModule,
   ],
   providers: [                         //TODOS LOS INTERCEPTORS SE TIENEN QUE AGREGAR MANUALMENTE A LOS PROVIDERS.
     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },

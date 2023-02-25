@@ -8,7 +8,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class StoreService {
 
-  private myShopCart: Product[] = []
+  private myShopCart: Product[] = [];
   private myCart = new BehaviorSubject<Product[]>([]);
 
   //OBSERVABLE, PARA EL CARRITO Y MUESTRE EL CONTEO DE PRODUCTOS DENTRO DE EL
